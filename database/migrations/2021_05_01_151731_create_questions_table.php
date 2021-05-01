@@ -18,14 +18,13 @@ class CreateQuestionsTable extends Migration
             $table-> string('title') -> unique();
             $table-> string('slug');
             $table-> text('body');
-            $table-> unsignedInteger('views') -> default(0);
+            $table-> unsignedInteger('view') -> default(0);
             $table-> unsignedInteger('answer') -> default(0);
             $table-> Integer('vote') -> default(0);
             $table-> unsignedInteger('answer_id') -> nullable();
             $table-> unsignedInteger('user_id');
             $table->timestamps();
 
-            $table -> foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -40,6 +40,6 @@ class User extends Authenticatable
     // User Questions Relationship
 
     public function questions(){
-        return $this->hasMany('App/Models/Question');
+        return $this->hasMany('App\Models\Question');
     }
 }
