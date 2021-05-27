@@ -30,7 +30,7 @@ class QuestionFactory extends Factory
         return [
             'title' => $title,
             'slug' => $slug,
-            'body' =>  $this -> faker -> paragraph(rand(3,5), true),
+            'body' =>  $this -> faker -> paragraph(rand(5,10), true),
             'view' => rand(0,50),
             'answer' => rand(0,50),
             'vote' => rand(-5,50),

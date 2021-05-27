@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       \App\Models\User::factory(6)->create()->each(function($user){
+        \App\Models\User::factory(6)->create()->each(function($user){
            $user->questions()
            ->saveMany(
             \App\Models\Question::factory(rand(1,5))->make()

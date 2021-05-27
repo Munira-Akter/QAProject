@@ -42,4 +42,10 @@ class User extends Authenticatable
     public function questions(){
         return $this->hasMany('App\Models\Question');
     }
+
+     // set url arrtibetue for question shoe by single view
+     public function getUrlAttribute(){
+        return "#";
+    }
+
 }
