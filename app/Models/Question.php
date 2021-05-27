@@ -19,5 +19,10 @@ class Question extends Model
         return $this->belongsTo('App\Models\User');
     }
 
+    // set url arrtibetue for question shoe by single view
+    public function getUrlAttribute(){
+        return route('question.show' , $this -> id);
+    }
+
 
 }
